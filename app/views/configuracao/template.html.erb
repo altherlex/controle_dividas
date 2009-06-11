@@ -1,0 +1,24 @@
+<%= stylesheet_link_tag("editor") %>
+<%= javascript_include_tag "editor.js" %>
+<%= javascript_include_tag "showdown.js" -%>
+
+<div class="topo">
+<p class="icone"><%= image_tag('template_email.png') %></p>
+<p class="titulo">Templates</p>
+</div>
+
+<div class="corpo">
+<div>
+	<%= javascript_tag "edToolbar('entrada');" %>
+	<textarea name="entrada" id="entrada" class="ed"></textarea>
+</div>
+<div>
+<br />
+<h1 style="color:#CBC8BA;">Resultado</h1><hr/>
+<div id="resultado" style="border:1px solid #236FBD;">
+	
+</div>
+</div>
+
+</div>
+<%= observe_field("entrada", :frequency => 3, :function => "$('resultado').innerHTML = $('entrada').getValue();")  %>

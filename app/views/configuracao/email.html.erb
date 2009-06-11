@@ -1,0 +1,42 @@
+<div class="topo">
+	<p class="icone"><%= image_tag('config_email32.png') %></p>
+	<p class="titulo">E-mail de envio</p>
+</div>
+
+<div class="corpo">
+<% form_tag :action => 'update' do -%>
+
+<table style="margin-left:25px;">
+<tbody>
+	<tr>
+		<td><label class="campo">Aut&ecirc;ntica&ccedil;&atilde;o</label><br /></td>
+		<td><%= text_field_tag 'authentication', (@email["authentication"] rescue ''), :maxlength=>'25', :style=> 'width: 150%;'  %></td>
+	</tr>
+	<tr>
+		<td><label class="campo">E-mail</label><br /></td>
+		<td><%= text_field_tag 'user_name', (@email["user_name"].to_s rescue ''), :maxlength=>'30', :style=> 'width: 150%;'  %></td>
+	</tr>
+	<tr>
+		<td><label class="campo">Senha</label><br /></td>
+		<td><%= password_field_tag 'password', (@email["password"].to_s rescue ''), :maxlength=>'30', :style=> 'width: 150%;'  %></td>
+	</tr>
+	<tr>
+		<td><label class="campo">Dom&iacute;nio</label><br /></td>
+		<td><%= text_field_tag 'domain', (@email["domain"] rescue ''), :maxlength=>'35', :style=> 'width: 150%;'  %></td>
+	</tr>
+	<tr>
+		<td><label class="campo">Endere&ccedil;o(SMTP)</label><br /></td>
+		<td><%= text_field_tag 'address', (@email["address"].to_s rescue ''), :maxlength=>'50', :style=> 'width: 150%;'  %></td>
+	</tr>
+	<tr>
+		<td><label class="campo">Porta</label><br /></td>
+		<td><%= text_field_tag 'port', (@email["port"].to_s rescue ''), :maxlength=>'5'  %></td>
+	</tr>
+	
+	<tr>
+		<td><%= submit_tag 'Salvar', {:style => "margin-top: 15px; width:100%;"} %></td>
+	</tr>
+</tbody>
+</table>
+<% end -%>
+</div>

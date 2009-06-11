@@ -1,0 +1,26 @@
+<h1>Listing dividas</h1>
+
+<table>
+  <tr>
+    <th>Descricao</th>
+    <th>Tpo notificacao</th>
+    <th>Preco</th>
+    <th>Parcelas</th>
+  </tr>
+
+<% for divida in @dividas %>
+  <tr>
+    <td><%=h divida.descricao %></td>
+    <td><%=h divida.tpo_notificacao %></td>
+    <td><%=h divida.preco %></td>
+    <td><%=h divida.parcelas %></td>
+    <td><%= link_to 'Show', divida %></td>
+    <td><%= link_to 'Edit', edit_divida_path(divida) %></td>
+    <td><%= link_to 'Destroy', divida, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New divida', new_divida_path %>

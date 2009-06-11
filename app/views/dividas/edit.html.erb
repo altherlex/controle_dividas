@@ -1,0 +1,28 @@
+<h1>Editing divida</h1>
+
+<% form_for(@divida) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descricao %><br />
+    <%= f.text_field :descricao %>
+  </p>
+  <p>
+    <%= f.label :tpo_notificacao %><br />
+    <%= f.text_field :tpo_notificacao %>
+  </p>
+  <p>
+    <%= f.label :preco %><br />
+    <%= f.text_field :preco %>
+  </p>
+  <p>
+    <%= f.label :parcelas %><br />
+    <%= f.text_field :parcelas %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @divida %> |
+<%= link_to 'Back', dividas_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  empresa: MyString
+  nome: MyString
+  email: MyString
+  tpo_email: MyString
+  preco: 9.99
+  parcelas: 1
+
+two:
+  empresa: MyString
+  nome: MyString
+  email: MyString
+  tpo_email: MyString
+  preco: 9.99
+  parcelas: 1

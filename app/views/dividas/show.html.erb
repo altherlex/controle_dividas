@@ -1,0 +1,23 @@
+<p>
+  <b>Descricao:</b>
+  <%=h @divida.descricao %>
+</p>
+
+<p>
+  <b>Tpo notificacao:</b>
+  <%=h @divida.tpo_notificacao %>
+</p>
+
+<p>
+  <b>Preco:</b>
+  <%=h @divida.preco %>
+</p>
+
+<p>
+  <b>Parcelas:</b>
+  <%=h @divida.parcelas %>
+</p>
+
+
+<%= link_to 'Edit', edit_divida_path(@divida) %> |
+<%= link_to 'Back', dividas_path %>

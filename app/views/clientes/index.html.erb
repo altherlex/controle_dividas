@@ -1,0 +1,43 @@
+<div class="topo">
+<p class="icone"><%= image_tag('prancheta32.png') %></p>
+ <p class="titulo">Lista de Clientes</p>
+</div>
+
+
+
+<div class="corpo">
+<table cellspacing="1" class='tablesorter'>
+<thead>
+  <tr>
+    <th align="left" style="width: 60px;">Situa&ccedil;&atilde;o</th>
+    <th>Empresa</th>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>
+      <% link_to(new_cliente_path) do %>
+      <img class="edtAdicionar" title="Adicionar" src="/images/new.gif"/>
+      <% end %>
+    </th>
+  </tr>
+</thead>
+<tbody>
+<% for cliente in @clientes %>
+  <tr>
+    <td align="center">
+      <img title="Situa&ccedil;&atilde;o" src="/images/devedor20.png"/>
+    </td>
+    <td><%=link_to cliente.empresa, cliente %></td>
+    <td><%=h cliente.nome %></td>
+    <td><%=h cliente.email %></td>
+    <td align="center" style="width: 60px;"><% link_to ({:controller => "clientes", :action => "edit", :id => cliente.id}) do %>
+              <img class="edtEditar" title="Editar" src="/images/edit.gif"/>
+           <% end %>
+    <% link_to (cliente, :confirm => 'Tem certeza que deseja excluir este item?', :method => :delete) do %>
+            <img class="edtExcluir" title="Excluir" src="/images/del.gif"/>
+          <% end %>
+    </td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+</div>

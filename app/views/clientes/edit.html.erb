@@ -1,0 +1,81 @@
+<div class="topo">
+	<p class="icone"></p>
+	<p class="titulo">Editar Cliente</p>
+</div>
+
+<%= hidden_field_tag( 'hid_cliente_id', session[:usuario_cad].id ) %>
+
+<% form_for(@cliente) do |f| %>
+<ul class="menu2">
+    <li class="top"><%= link_to 'Voltar', @cliente, :class=>"top_link" %></li>
+    <%#= link_to 'Back', clientes_path, :class=>"top_link" %>
+</ul>
+  <%= f.error_messages %>
+
+<div class="corpo">
+<table>
+<tbody>
+  <tr>
+    <%#= f.label :empresa%><br />
+    <td><label class="campo">Empresa</label><br /></td>
+    <td><%= f.text_field :empresa %></td>
+  </tr>
+  
+  <tr>
+    <td><label class="campo">Contato</label><br /></td>
+    <td><%= f.text_field :nome %></td>
+    
+    <td><label class="campo" style="padding-left:30px;">E-mail</label><br /></td>
+    <td><%= f.text_field :email %></td>
+  </tr>
+</tbody>
+</table>
+
+<div class="barra_sub_informacao">Pend&ecirc;ncias
+	<a href="javascript:void(0)" id="btn_adicionar">
+		<img src="/images/new.gif" title="Adicionar nova parcela" class="edtAdicionar"/>
+	</a>
+</div>
+
+<% if !@cliente.Dividas.empty? %>    
+	<div id="dividas">
+	<!--
+	<p style="text-align:right; margin:0px" class="descricao"><span class="descricao">Ano:</span> -->
+	<%#= select_tag('nmr_ano_recur_mat', options_for_select( (Time.now.year-3..Time.now.year+1).to_a.reverse.each{|ano| [ano, ano]}, Time.now.year ), :onchange => "SOC.clsSocUsrPrograma.ObterLstProgramaRecurMaterial($F('nmr_ano_recur_mat'));" ) %>
+	<!--
+	</p>
+	-->
+	<div class="grid_interacao">
+		<div class="divScroll100">
+			<table class="Resultado">
+			<thead>
+			<tr>
+				<td rowspan="2">Descri&ccedil;&atilde;o</td>
+				<td colspan="12" style="text-align:center;">M&ecirc;ses</td>
+			</tr>
+			<tr>
+				<td>Jan</td>
+				<td>Fev</td>
+				<td>Mar</td>
+				<td>Abr</td>
+				<td>Mai</td>
+				<td>Jun</td>
+				<td>Jul</td>
+				<td>Ago</td>
+				<td>Set</td>
+				<td>Out</td>
+				<td>Nov</td>
+				<td>Dez</td>
+			</tr>
+			</thead>
+			<tbody id="conteudo_parcelas"/>
+			</tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+<%end%>
+
+<%= f.submit "Salvar" %>
+</div>
+<% end %>

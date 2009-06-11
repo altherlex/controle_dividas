@@ -1,0 +1,4 @@
+<tr>
+	<td><%=h @usuario.usuario %></td>
+	<td><%= link_to "#{image_submit_tag('del.gif')}", @usuario, :confirm => 'Tem certeza?', :method => :delete %></td>
+</tr>

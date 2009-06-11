@@ -1,0 +1,35 @@
+<div class="topo"><p class="titulo">Novo Cliente</p></div>
+
+<% form_for(@cliente) do |f| %>
+<ul class="menu2">
+    <li class="top"><%= link_to 'Cancelar', clientes_path, :class=>"top_link" %></li>
+</ul>
+
+<%= f.error_messages %>
+
+<div class="corpo">
+<table>
+<tbody>
+  <tr>
+    <td><label class="campo">Empresa</label><br /></td>
+    <td class="descricao"><%= f.text_field :empresa %></td>
+  </tr>
+  <tr>
+    <td><label class="campo">Contato</label><br /></td>
+    <td class="descricao"><%= f.text_field :nome %></td>
+    
+    <td><label class="campo" style="padding-left:30px;">E-mail</label><br /></td>
+    <td class="descricao"><%= f.text_field :email %></td>
+  </tr>
+<!--
+  <tr>
+    <td colspan="6"> <div class="barra_sub_informacao">Pend&ecirc;ncias</div></td>
+  </tr>
+-->
+</tbody>
+</table>
+  <p>
+    <%= f.submit "Salvar" %>
+  </p>
+</div>
+<% end %>

@@ -1,0 +1,39 @@
+<div class="topo">
+	<p class="icone"><%= image_tag('usuarios24.png') %></p>
+	<p class="titulo">Usu&aacute;rios</p>
+</div>
+
+<div class="corpo">
+<p id="add_link">
+	<%= link_to_function("#{image_submit_tag('new.gif')}", "Element.remove('add_link'); Element.show('add_subject')")%>
+</p>
+
+<div id="add_subject" style="display:none;">
+<% form_remote_tag(:url => 'usuarios/create', :update => "lista_usuarios", 
+			       :position => :bottom, 		  :html => {:id => 'usuario_form'}) do %>
+	<%= label_tag '', 'Usuario', :class => 'campo' %>
+	<%= text_field "usuario", "usuario", :maxlength => '30'%><br />
+	<%= label_tag '', 'Senha', :class => 'campo' %>
+	<%= password_field "usuario", "senha", :maxlength => '30'%>
+	<%= submit_tag 'Adicionar' %>
+<% end %>
+<hr/>
+</div>
+
+
+<table>
+	<thead>
+		<tr>
+			<th>Usu&aacute;rios</th>
+		</tr>
+	</thead>  
+	<tbody id="lista_usuarios">
+	<% for usuario in @usuarios %>
+	<tr>
+    	<td><%=h usuario.usuario %></td>
+	    <td><%= link_to "#{image_submit_tag('del.gif')}", usuario, :confirm => 'Tem certeza?', :method => :delete %></td>
+  	</tr>
+	<% end %>
+	</tbody>
+</table>
+</div>

@@ -1,0 +1,21 @@
+<% @title = "login" %>
+
+<% if @erro %>
+  <div style="border: 1px solid red; color: red">
+    <%= @erro %>
+  </div>
+<% end %>
+
+<% form_tag :action => :login do %>
+  <p>
+    <label>Usuário</label><br />
+    <%= text_field_tag :usuario, params[:usuario] %>
+  </p>
+  <p>
+    <label>Senha</label><br />
+    <%= password_field_tag :senha %>
+  </p>
+  <p>
+    <%= submit_tag "Login" %>
+  </p>
+<% end %>

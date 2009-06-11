@@ -1,0 +1,7 @@
+--- !map:HashWithIndifferentAccess 
+authentication: plain
+domain: localhost.com
+port: "3000"
+user_name: josue@hotmail.com
+password: "123456"
+address: smtp.gmail.com.br

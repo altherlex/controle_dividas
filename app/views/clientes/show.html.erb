@@ -1,0 +1,74 @@
+<div class="topo">
+  <p class="icone"></p>
+	<p class="titulo">Visualizar Cliente</p>
+</div>
+
+<ul class="menu2">
+    <li class="top"><%= link_to 'Editar', edit_cliente_path(@cliente), :class=>"top_link"%></li>
+    <li class="top"><%= link_to 'Voltar', clientes_path, :class=>"top_link" %></li>
+</ul>
+
+<%= hidden_field_tag( 'hid_cliente_id', session[:usuario_cad].id ) %>
+
+<div class="corpo">
+<table>
+<tbody>
+<tr>
+  <td class="campo">Empresa:</td>
+  <td class="descricao"><%= @cliente.empresa%></td>
+</tr>
+
+<tr>
+  <td class="campo">Contato:</td>
+  <td class="descricao"><%= @cliente.nome %></td>
+  
+  <td class="campo">E-mail:</td>
+  <td class="descricao"><%= @cliente.email %></td>
+</tr>
+</tbody>
+</table>
+
+<!-- TO DO: MOSTRAR UM 'V' PARA AS PARCELAS PAGAS... VER CORES PARA AQUELAS PARCELAS QUE JÁ FORAM ENVIADAS ALGUMA NOTIFICAÇÃO-->
+    <div class="barra_sub_informacao">Pend&ecirc;ncias</div>
+    <!-- <input type="button" onclick="HTML.clsGlbUsrPopUp.AbrirFormulario('/dividas/new', 120, 700);" class="edtAdicionar"/> 
+    <img style="margin:5px 0 0;" class="edtAdicionar" id="add" title="Adicionar" src="/images/new.gif"/>-->
+
+<% if !@cliente.Dividas.empty? %>    
+	<div id="dividas">
+	<!--
+	<p style="text-align:right; margin:0px" class="descricao"><span class="descricao">Ano:</span> -->
+	<%#= select_tag('nmr_ano_recur_mat', options_for_select( (Time.now.year-3..Time.now.year+1).to_a.reverse.each{|ano| [ano, ano]}, Time.now.year ), :onchange => "SOC.clsSocUsrPrograma.ObterLstProgramaRecurMaterial($F('nmr_ano_recur_mat'));" ) %>
+	<!--
+	</p>
+	-->
+	<div class="grid_interacao">
+		<div class="divScroll100">
+			<table class="Resultado">
+			<thead>
+			<tr>
+				<td rowspan="2">Descri&ccedil;&atilde;o</td>
+				<td colspan="12" style="text-align:center;">M&ecirc;ses</td>
+			</tr>
+			<tr>
+				<td>Jan</td>
+				<td>Fev</td>
+				<td>Mar</td>
+				<td>Abr</td>
+				<td>Mai</td>
+				<td>Jun</td>
+				<td>Jul</td>
+				<td>Ago</td>
+				<td>Set</td>
+				<td>Out</td>
+				<td>Nov</td>
+				<td>Dez</td>
+			</tr>
+			</thead>
+			<tbody id="conteudo_parcelas"/>
+			</tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+<%end%>
+</div>

@@ -1,0 +1,1345 @@
+/* CSS Document */
+html,
+body{
+  padding:0px;
+	margin:0px;
+	height:100%;
+  border: none;
+  background-color:#FFF;
+}
+
+form{
+	margin:0px;
+	padding:0px;
+}
+
+.resize-handle-active {
+	cursor: e-resize;
+}
+
+div.resize-handle {
+	cursor: e-resize;
+	width: 2px;
+	border-right: 1px dashed #1E90FF;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+#geral{
+	width:993px;
+	height:100%;
+}
+
+a, li{
+	font: normal normal normal 11px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.cabecalho{
+	width: 993px;
+	height: 78px;
+}
+
+.menu_usuario{
+	float: right;
+	margin: 5px 10px 0px 0px;
+	z-index:4;
+	position:relative;
+	text-align:right;
+}
+
+.menu_usuario p,
+.menu_usuario a{
+	font: normal normal normal 11px Verdana, Arial, Helvetica, sans-serif;
+	margin:0px;
+	text-decoration:none;
+}
+
+.menu_usuario a:hover{
+	text-decoration:underline;
+}
+
+.menu_aba{
+	padding-top:54px;
+	padding-left:80px;
+	z-index:3;
+	position:relative;
+}
+
+.menu_aba ul, .menu_aba2 ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+
+.menu_aba ul li{
+	display:inline;
+	float:left;
+	margin-right:-1px;
+	height:21px;
+	z-index:inherit;
+	position:relative;
+}
+
+.menu_aba ul li div{
+	float: left;
+	padding:0px 5px 0px 5px;
+	height:21px;
+	z-index:inherit;
+}
+
+.menu_aba ul li a{
+	display:block;
+	padding:3px 8px 0px 8px;
+	height:18px;
+	_width:1%;
+	white-space:nowrap;
+	text-decoration:none;
+}
+
+.menu_aba ul li a:hover, .menu_aba2 ul li a:hover{
+	text-decoration:underline;
+}
+
+.menu_aba ul li#current a{
+	padding-bottom:0px;
+	padding-left:4px;
+	padding-right:4px;
+}
+
+.linha_menu{
+	z-index:0;
+	position:relative;
+	margin-top:-1px;
+	height:8px;
+	font-size:1px;
+	clear:both;
+}
+
+.linha2_menu{
+	margin-top:5px;
+	vertical-align:bottom;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+.menu_aba2{
+	height:21px;
+	padding-left:5px;
+	margin-top:20px;
+}
+
+.menu_aba2 ul li{
+	display:inline;
+	float:left;
+	height:21px;
+	background:url(../img/separador_menu.gif) right center no-repeat;
+}
+
+.menu_aba2 ul li a{
+	display:block;
+	padding:3px 7px 0px 7px;
+	height:18px;
+	_width:1%;
+	white-space:nowrap;
+	text-decoration:none;
+}
+
+.menu_aba2 ul li.selected{
+	margin-left:-3px;
+	margin-right:-3px;
+}
+
+.menu_aba2 ul li.selected div{
+	float: left;
+	padding:0px 15px 0px 5px;
+	height:21px;
+	border:none;
+}
+
+.menu_aba2 ul li.selected a{
+	padding-right:1px;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+.menu_lateral{
+	width:170px;
+	float:left;
+	margin-left: 5px !important;
+	margin: 0px 0px 0px 2px;
+	height:100%;
+}
+
+.menu_lateral ul{
+	list-style:none;
+	margin:0px 0px 20px 0px;
+	padding:0px;
+}
+
+.menu_lateral ul li.titulo{
+	font: normal  normal bold 11px Verdana, Arial, Helvetica, sans-serif;
+	height:21px;
+	margin:0px;
+	padding-left: 10px;
+}
+
+.menu_lateral ul li.titulo p{
+	margin:0px;
+	padding-top:4px;
+}
+
+.menu_lateral ul li{
+	margin-bottom: 2px;
+}
+
+.menu_lateral ul li a{
+	margin:0px;
+	display:block;
+	padding:2px 0px 4px 22px;
+}
+
+.menu_lateral ul li a:hover{
+}
+
+.menu_lateral ul.historico li a{
+	margin:0px;
+	display:block;
+	padding:2px 0px 4px 3px;
+}
+
+.menu_lateral ul.historico li a div{
+	height:16px;
+	width:16px;
+	float:left;
+	margin-right:4px;
+	margin-top:3px;
+}
+
+.barra_dimensao{
+	float:left;
+	border-left: 1px #A7A7A7 solid;
+	height:100%;
+	width:8px !important;
+	width:9px;
+	margin-right:1px;
+	display:table;
+}
+
+.barra_dimensao img{
+	padding-top:10px;
+	cursor:pointer;
+}
+
+.LinkPessoa {
+	cursor:pointer;
+	text-decoration: underline;
+}
+
+#aAreaCriarNovo{
+	margin-bottom:20px;
+	width:100%;
+	margin:auto auto 15px auto !important;
+}
+
+#aAreaCriarNovo #aCbBoxCriacao_options{
+	margin-left: 6px;
+}
+
+.img_combobox{
+	background:url(../img/combobox.gif) no-repeat;
+	height:19px;
+	width:158px;
+	cursor:pointer;
+	margin:auto;
+}
+
+.img_combobox p{
+	display:table;
+	margin:2px 0px 0px 3px;
+	font:normal normal bold 11px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.img_combobox:hover{
+	margin:-1px auto;
+}
+
+.combobox_options{
+	position:absolute;
+	z-index:99;
+	margin:0px 6px;
+}
+
+.combobox_options_esconder{
+	display:none;
+}
+
+.combobox_options{
+	display:block;
+}
+
+.combobox_options ul{
+	list-style:none;
+	margin:0px;
+}
+
+.combobox_options ul li{
+	padding:0px;
+	margin:0px;
+}
+
+.combobox_options ul li a{
+	font:normal normal normal 11px Verdana, Arial, Helvetica, sans-serif;
+	padding:3px 0px 3px 5px;
+	margin:0px;
+	text-decoration:none;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+
+.conteudo{
+	margin-top: 12px !important;
+	margin-top: 5px;
+	width:100%;
+	clear:both;
+	height:86%;
+}
+
+.conteudo_princ{
+	margin-left:185px;
+}
+
+.geral_login .conteudo_princ,
+.geral_sistema .conteudo_princ{
+	margin-left:0px;
+}
+
+.topo{
+	height:40px;
+	margin-bottom:10px;
+}
+
+.topo p.icone{
+	margin:5px 0px 0px 5px;
+	padding:0px;
+	float:left;
+}
+
+.topo p.titulo{
+	font: normal normal bold 13px Verdana, Arial, Helvetica, sans-serif;
+	margin:10px 0px 0px 5px;
+	padding:0px;
+	float:left;
+}
+
+.conteudo .topo a.ajuda{
+	margin:11px 5px 0px 0px;
+	font:normal normal normal 11px Arial, Helvetica, sans-serif;
+	float:right;
+	cursor:help;
+}
+
+.conteudo .topo a.ajuda span{
+	margin:0px;
+	padding:0px;
+	color:#FFFFFF;
+	text-decoration:underline;
+	float:left;
+}
+
+.conteudo .topo a.ajuda img{
+	border:none;
+	margin-left:2px;
+}
+
+.conteudo .box_1,
+.conteudo .box_2,
+.conteudo .box_3{
+	margin-bottom:10px;
+}
+
+.conteudo .box_1 .titulo{
+	font: normal normal bold 12px Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	padding: 2px 0px 2px 4px;
+}
+
+.conteudo .box_1 .corpo{
+	padding: 10px 20px 10px 20px;
+	width:auto !important;
+	_float:left; /*Hack para o IE6*/
+}
+
+.login{
+	width: 250px;
+	margin:0px auto;
+}
+
+.login td{
+	padding:2px 0px 2px 0px;
+}
+
+.conteudo .box_2 .titulo,
+.login .titulo{
+	font: normal normal bold 11px Verdana, Arial, Helvetica, sans-serif;
+	padding: 4px 4px 4px 4px;
+	text-align:left;
+}
+
+.conteudo .box_2 .titulo .descricao{
+	float:left;
+	width:40%;
+}
+
+
+*:first-child+html .conteudo .box_2 .titulo .botoes{
+
+}
+
+.conteudo .box_2 .titulo .botoes{
+	text-align:center;
+	*display: inline; /* Hack IE7 para que os botões superiores fiquem centralizados na tela*/
+	_display: inline; /* Hack IE6 para que os botões superiores fiquem centralizados na tela*/
+	margin: 0px auto;
+	width:19%;
+}
+
+.conteudo .box_2 .titulo .complemento{
+	float:right;
+	width:40%;
+	text-align:right;
+}
+
+.conteudo .box_2 .corpo,
+.conteudo .box_3 .corpo,
+.login .corpo{
+	padding: 10px 20px 10px 20px;
+	width:auto !important;
+	_float:left;
+}
+
+.conteudo .box_3 .titulo{
+	padding: 0px 0px 0px 4px;
+}
+
+.barra_sub_informacao,
+.barra_sub_informacao_h{
+	clear:both;
+	font: normal normal bold 11px Verdana, Arial, Helvetica, sans-serif;
+	padding:1px 0px 2px 0px;
+	margin:20px 0px 0px 0px;
+	width:100%;
+}
+
+.barra_sub_informacao{
+	text-indent:15px;
+}
+
+.barra_sub_informacao_h{
+	cursor:pointer;
+}
+
+.conteudo table{
+	width:100%;
+}
+
+.conteudo .corpo ul.configuracao{
+	list-style:none;
+	margin:10px 0px 0px 10px;
+	padding:0px;
+}
+
+.conteudo .corpo ul.configuracao li{
+	margin-bottom:10px;
+}
+
+.conteudo .corpo ul.configuracao li a{
+	text-decoration:none;
+}
+
+.conteudo .corpo ul.configuracao li a:hover{
+	text-decoration:underline;
+}
+
+.conteudo .corpo ul.configuracao li img{
+	vertical-align:middle;
+	margin-left: -5px;
+	margin-right: 4px;
+	width:25px;
+	height:25px;
+	border:none;
+}
+
+.barra_botoes{
+	margin-top:-22px;
+	text-align:right;
+	*float:right; /* Hack IE7 para que a barra de botões não sobreponha o último campo na tela de consulta*/
+}
+
+.login .barra_botoes{
+	text-align:center;
+	float:none;
+	margin:7px 0px 0px 0px;
+	*float:none; /* Hack IE7 para que a barra de botões não sobreponha o último campo na tela de consulta*/
+}
+
+.barra_botoes2{
+ list-style-image:none;
+ list-style-position:outside;
+ list-style-type:none;
+ padding:0px;
+ margin:0px;
+}
+
+.barra_botoes2 li{
+	display: inline;
+	float: left;
+}
+
+.barra_botoes2 li input{
+	font-size:12px;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	height:30px;
+	width:150px;
+	cursor: pointer;
+	padding:0px;
+	margin:0px 5px 0px 0px;
+	border:1px solid #CCCCCC;
+	background-color:#F3F3EC;
+	color:#000000;
+}
+
+.rodape{
+	font:normal normal normal 11px Verdana, Arial, Helvetica, sans-serif;
+	clear:both;
+	width:100%;
+	text-align:center;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+.separador_horizontal{
+	clear:both;
+}
+
+.parametros_filtro,
+.parametros_edicao,
+.parametros_visualizacao{
+	font:normal normal normal 11px Verdana, Arial, Helvetica, sans-serif;
+	border-spacing:0px;
+	margin:0px;
+	padding:0px;
+	border-collapse:collapse;
+}
+
+.parametros_filtro .campo,
+.parametros_visualizacao .campo,
+.parametros_edicao .campo{
+	font-weight:bold;
+	padding:4px 6px 4px 0px;
+	width:15%;
+	text-align:right;
+	/*vertical-align:middle;*/
+}
+
+.parametros_visualizacao .descricao,
+.parametros_filtro .descricao,
+.parametros_edicao .descricao{
+	width:35%;
+}
+
+.parametros_visualizacao .descricao{
+	padding:7px 0px 7px 0px;
+}
+
+.parametros_filtro .descricao,
+.parametros_edicao .descricao{
+	padding:3px 0px 3px 0px;
+}
+
+.parametros_filtro td input,
+.parametros_filtro td textarea,
+.parametros_filtro td select,
+.parametros_filtro td div,
+.parametros_filtro td span,
+.parametros_edicao .descricao input,
+.parametros_edicao .descricao textarea,
+.parametros_edicao .descricao select,
+.parametros_edicao .descricao div,
+.parametros_edicao .descricao span{
+	float:left;
+}
+
+input, select, textarea{
+	font: normal normal normal 12px Geneva, Arial, Helvetica, sans-serif;
+}
+
+input{
+	padding:1px 0px 1px 2px;
+}
+
+input.pesquisa{
+	background: #fff url(http://libwebdes.lbv.org.br/img/lupa.gif) no-repeat center right;
+	border:1px #ccc solid;
+}
+
+input.botao{
+	font-size:12px;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+	height:20px;
+	cursor: pointer;
+	padding:0px;
+}
+
+input.botao_imagem{
+	height:19px;
+	font: normal normal normal 11px Tahoma;
+}
+
+input.btnNovo{
+	width:20px;
+	height:20px;
+	border:none;
+	cursor: pointer;
+}
+
+.ColDeletar{
+	width: 20px;
+}
+
+.txtCampoMinimo{
+	width:10%;
+}
+
+.txtCampoPequeno{
+	width:30%;
+}
+
+.txtCampoMedio{
+	width:50%;
+}
+
+.txtCampoRegular{
+	width:65%;
+}
+
+.txtCampoGrande{
+	width:85%;
+}
+
+.txtCampoExtraGrande{
+	width:96%;
+}
+
+.txtData{
+	width:70px;
+	float:left;
+}
+
+.txtDataMes{
+	width:50px;
+	float:left;
+}
+
+.txtDataAno{
+	width:40px;
+	float:left;
+}
+
+.txtDDD{
+	width:30px;
+	margin-right:4px;
+}
+
+.txtTelefone{
+	width:85px;
+}
+
+.txtQtdProduto{
+	width:50px;
+}
+
+txtDisabled{
+	color: #000;
+	border:1px #AFC2CC solid;
+	background-color: #ECE9D8;
+}
+
+img.btnOk, img.btnEditar, img.btnExcluir, img.btnAtivar, img.btnInativar{
+	margin:0px 0px 0px 3px;
+	width:15px;
+	height:15px;
+	cursor: pointer;
+}
+
+.areaFoto {
+	position: absolute;
+	top: 180px;
+	left: 830px;
+	width:120px;
+	height:141px;
+	border:1px #000000 solid;
+}
+
+.areaBotaoFoto {
+	position: absolute;
+	top: 327px;
+	left: 853px;
+	margin-left: -100px;
+}
+
+.areaFoto img{
+	vertical-align:middle;
+}
+
+.areaBotaoFoto input{
+	clear:both;
+	float:left;
+	margin: 2px 0px 0px 15px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+.calendario{
+	float:left;
+	background:url(../img/icones/calendario19.gif) no-repeat;
+	width:22px;
+	height: 19px;
+	margin-left: 5px;
+	margin-right: 2px;
+	cursor:pointer;
+}
+
+.pesquisar{
+	float:left;
+	background:url(../img/icones/lupa19.gif) no-repeat;
+	width:22px;
+	height:20px;
+	margin-left: 5px;
+	cursor:pointer;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+
+.grid_interacao{
+	display:table;
+	width:100%;
+}
+
+.grid_interacao .divScroll96{
+	float:left;
+	width:95%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin: 0 auto;
+	margin-top:5px;
+}
+
+.grid_interacao .divScroll,
+.grid_interacao .divScroll100{
+	width:100%;
+	overflow: auto;
+	overflow-x: hidden;
+	margin: 0 auto;
+	margin-top:5px;
+}
+
+.grid_interacao ul{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+	float:right;
+}
+
+.grid_interacao ul li{
+	display:table;
+	margin:0px;
+	padding:0px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+.login_fundoPrinc, .login_fundoInt {
+	width:100%;
+	height:400px;
+	padding-top:150px;
+	text-align:center;
+}
+
+.login_fundoPrinc{
+	width:993px;
+}
+
+/* Retirar #div_carregar */
+.div_carregar,
+#div_carregar{
+	position: absolute;
+	height: 36px;
+	width: 36px;
+	z-index:100;
+	border:1px #7CAABA solid;
+	margin:0px;
+	padding:0px;
+	background-color: #FFFFFF;
+}
+
+.div_carregar img,
+#div_carregar img{
+	padding:2px;
+}
+
+#divMensagem{
+	position: absolute;
+	z-index:100;
+	border:1px #7CAABA solid;
+	background: #F4F4F4;
+	width:300px;
+	margin:0px;
+	padding:0px;
+	font:normal normal normal 11px verdana;
+}
+
+#divMensagem .titulo{
+	background:#BDCEDF;
+	padding:5px;
+	margin:0px;
+	cursor:move;
+}
+
+#divMensagem .corpo{
+	padding:15px 5px 15px 5px;
+	margin:0px;
+}
+
+#divMensagem .botoes{
+	text-align:center;
+	margin:5px 0px 12px 0px;
+	padding:0px 0px 0px 0px;
+}
+
+#divMensagem .detalhe{
+	float:right;
+	width:30%;
+	margin: 0px 5px 5px 0px;
+	text-align:right;
+}
+
+#divMensagem .detalhe_corpo{
+	height:150px;
+	width:292px;
+	border:1px #7CAABA solid;
+	clear:both;
+	overflow:scroll;
+	margin: 0px 3px 3px 3px;
+}
+
+#FormPopUp{
+	z-index:99;
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+}
+
+#divAnime{
+	z-index:97;
+	position: absolute;
+}
+
+#div_lista{
+	position: absolute;
+	z-index:98;
+	height:100px;
+	overflow: auto;
+}
+
+#div_lista ul{
+	padding:0px;
+	margin:0px;
+	list-style:none;
+}
+
+#div_lista ul li{
+	clear:both;
+}
+
+#div_lista ul li a{
+	display:block;
+	text-decoration:none;
+ 	font: normal normal normal 10px Geneva, Arial, Helvetica, sans-serif;
+	min-height:15px;
+}
+
+#div_lista ul li div{
+	margin:0px;
+	padding:0px;
+	float:left;
+	overflow:hidden;
+	height:16px;
+	cursor: pointer;
+}
+
+div.campo_obrig {
+	border-left: 3px solid #B90000;
+	float: left;
+	margin-right: 2px;
+	padding: 0pt 0pt 0pt 1px;
+}
+
+div.campo_nao_obrig{
+	margin: 0pt 2pt 0pt 0pt;
+	padding-left: 4px;
+}
+
+div.erro{
+	font: normal normal normal 11px Geneva, Arial, Helvetica, sans-serif;
+	color: #ff0000;
+	border: 2px #FF0000 solid;
+	margin: 2px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+div.selecao_lista{
+	float:left;
+	width:47%;
+}
+
+div.selecao_lista span{
+	font: normal normal bold 11px Verdana, Arial, Helvetica, sans-serif;
+	margin-bottom:1px;
+}
+
+div.selecao_botao{
+	float:left;
+	width:20px;
+	margin:35px 10px 0px 4px
+}
+
+div.selecao_botao input{
+	margin-bottom:5px;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+div.paginacao{
+	font: normal normal normal 11px Verdana, Arial, Helvetica, sans-serif;
+	margin-top:10px;
+	padding-top:5px;
+	border-top:1px solid #EEECD1;
+	color:#444;
+}
+
+div.paginacao input.botao{
+	font-size:10px;
+	height:17px;
+}
+
+div.paginacao .paginacaoDisplay{
+	font-weight:bold;
+	margin-right:10px;
+	float:left;
+	text-align:left;
+	width:33%;
+}
+
+div.paginacao .paginacaoPaginas{
+	float:left;
+	text-align:center;
+	width:30%;
+}
+
+div.paginacao .paginacaoPaginas input,
+div.paginacao .paginacaoPaginas a{
+	margin: 0px 1px 0px 1px;
+}
+
+div.paginacao .paginacaoDisplay select{
+	font: normal normal normal 11px Verdana, Arial, Helvetica, sans-serif;
+}
+
+div.paginacao .paginacaoRelacPag{
+	margin-left:10px;
+	float:right;
+	text-align:right;
+	font-weight:bold;
+	width:33%;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+div.lista_atividade {
+	float: left;
+	width:70%;
+}
+
+div.lista_atividade p{
+	font: normal normal bold 13px Geneva, Arial, Helvetica, sans-serif;
+	width:100%;
+	padding:0px;
+}
+
+div.lista_atividade #TituloHoje{
+	margin:0px;
+}
+
+div.lista_atividade #TituloAmanha{
+	margin:30px 0px 0px 0px;
+}
+
+div.lista_atividade ul{
+	padding:0px;
+	margin:10px 0px 0px 0px;
+}
+
+div.lista_atividade ul li{
+	list-style:none;
+}
+
+div.lista_atividade ul li a{
+	text-decoration:none;
+}
+
+div.lista_atividade ul li a.atrasado{
+}
+
+div.lista_atividade ul li a:hover{
+	text-decoration:underline;
+}
+
+div.divImgSetaFechado{
+	float:left;
+	margin: 0px 5px 0px 5px;
+	height:15px;
+	width:11px;
+	background:url(http://libweb.lbv.org.br/img/icones/seta_lado.gif) center no-repeat;
+}
+
+div.divImgSetaAberto{
+	float:left;
+	margin: 0px 5px 0px 5px;
+	height:15px;
+	width:11px;
+	background:url(http://libweb.lbv.org.br/img/icones/seta_baixo.gif) center no-repeat;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+p.txtResumoEntrega,
+p.descricao{
+	font: normal normal bold 11px Verdana, Arial, Helvetica, sans-serif;
+	text-align:left;
+	margin-bottom:0px;
+	color:#444;
+}
+
+span.txtCaracteresRestates{
+	width:97%;
+	float:right;
+	text-align:right;
+}
+/*------------------------------------------------------------------------------------------------*/
+.modulo_calendario{
+	width:190px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding:6px;
+	float:right;
+}
+
+.modulo_calendario .nomeMes{
+	font-size:11px;
+}
+
+.modulo_calendario .nomeMes a{
+	text-decoration:none;
+}
+
+.modulo_calendario .nomeMes th{
+	padding-bottom:5px;
+}
+
+.modulo_calendario .nomeDia{
+	font-size:11px;
+}
+
+.modulo_calendario .dia{
+	text-align:center;
+	font-size:11px;
+	padding:2px;
+}
+
+.modulo_calendario .dia a{
+	text-align:center;
+	text-decoration:none;
+	padding:1px;
+}
+
+.modulo_calendario .dia a.atividade{
+}
+
+.modulo_calendario .dia a.hoje{
+}
+
+.modulo_calendario .dia a.escolhido{
+}
+
+.overlay{ position: absolute; top: 0; left: 0; z-index: 98; width: 0px; height: 0px; background-color: #000; 	filter:alpha(Opacity=0);	opacity:.0; }
+
+/* Notificação */
+
+.notificacao{
+	width:453px;
+	overflow: hidden;
+	position: absolute;
+	z-index:1000;
+	left:330px;
+	top:133px;
+	border:3px #AF2A2F solid;
+	background: rgb(247, 247, 247) url(http://libwebdes.lbv.org.br/img/icones/horas.png) no-repeat scroll right bottom;
+}
+
+.notificacao .titulo {
+	background-color:#AF2A2F;
+ 	color:#FFFCFB;
+ 	font: normal normal bold 15px Arial, Helvetica, sans-serif;
+ 	height:20px;
+ 	padding: 5px 0px 0px 10px;
+}
+
+.notificacao .info_cabecalho{
+	font:italic normal normal 11px Verdana, Arial, Helvetica, sans-serif;
+	text-align:right;
+	background-color:#F3F3EC;
+	padding:4px;
+}
+
+.notificacao .corpo{
+ padding:15px 10px 10px 10px;
+ font:normal normal normal 12px Verdana, Arial, Helvetica, sans-serif;
+ min-height:250px;
+}
+
+.notificacao .corpo div{
+ *margin-top:-5px;
+}
+
+.notificacao .corpo img{
+ padding: 0px 15px 5px 5px;
+ float:left;
+}
+
+.notificacao a{
+	float:right;
+}
+
+.notificacao a{
+	padding:0 5px 5px 0;
+}
+
+.notificacao .campo{
+	font: normal normal normal 11px Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* Dashboard */
+
+.widget_nw {
+	background:transparent url(../img/dashboard/top_left.gif) no-repeat;
+	height:30px;
+}
+
+.widget_w {
+  border-left:1px solid #B9B9B9;
+  margin-left:5px;
+}
+
+.widget_sw {
+	background:transparent url(../img/dashboard/bottom_left.gif) no-repeat;
+	height:15px;
+}
+
+.widget_title {
+	background:  url(../img/dashboard/top_right.gif) repeat-x right top;
+	color:#123456;
+	font:bold 14px/25px Tahoma, Arial, sans-serif;
+	height:26px;
+	margin:0 0 0 15px;
+	padding:5px 0 0 0 ;
+	text-align:center;
+	margin-left:15px;
+}
+
+.widget_content {
+  background-color:#FDFDFD;
+  color:#71777A;
+  font:normal 12px/1em Tahoma, Arial, sans-serif;
+  overflow:hidden;
+  padding:5px;
+  border-right:1px solid #B9B9B9;
+  margin-right:5px;
+}
+
+.widget_statusbar {
+	background:transparent url(../img/dashboard/bottom_right.gif) repeat-x right top;
+	font-size:8px;
+	height:15px;
+	margin-left:11px;
+}
+
+.widget_draggable {
+  cursor:move;
+}
+
+.widget_ghost {
+  background:#FFF;
+  opacity: 0.5;
+  filter:alpha(opacity=50);
+  position:relative;
+  border: 3px dashed #F00;
+  margin:0px;
+  padding:0;
+}
+
+
+/* Auto Sugestão */
+
+div.autosuggest{
+	position: absolute;
+	background-image: url(http://libwebdes.lbv.org.br/img/auto_sugestao/as_pointer.gif);
+	background-position: top;
+	background-repeat: no-repeat;
+	padding: 10px 0 0 0;
+}
+
+div.autosuggest div.as_header,
+div.autosuggest div.as_footer{
+	position: relative;
+	height: 6px;
+	padding: 0 6px;
+	background-image: url(http://libwebdes.lbv.org.br/img/auto_sugestao/ul_corner_tr.gif);
+	background-position: top right;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+div.autosuggest div.as_footer{
+	background-image: url(http://libwebdes.lbv.org.br/img/auto_sugestao/ul_corner_br.gif);
+}
+
+div.autosuggest div.as_header div.as_corner,
+div.autosuggest div.as_footer div.as_corner{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 6px;
+	width: 6px;
+	background-image: url(http://libwebdes.lbv.org.br/img/auto_sugestao/ul_corner_tl.gif);
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+div.autosuggest div.as_footer div.as_corner{
+	background-image: url(http://libwebdes.lbv.org.br/img/auto_sugestao/ul_corner_bl.gif);
+}
+
+div.autosuggest div.as_header div.as_bar,
+div.autosuggest div.as_footer div.as_bar{
+	height: 6px;
+	overflow: hidden;
+	background-color: #333;
+}
+
+div.autosuggest ul{
+	list-style: none;
+	margin: 0 0 -4px 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+div.autosuggest ul li{
+	color: #ccc;
+	padding: 0;
+	margin: 0 4px 4px;
+	text-align: left;
+}
+
+div.autosuggest ul li a{
+	color: #ccc;
+	display: block;
+	text-decoration: none;
+	background-color: transparent;
+	text-shadow: #000 0px 0px 5px;
+	position: relative;
+	padding: 0;
+	width: 100%;
+}
+
+div.autosuggest ul li a:hover{
+	background-color: #444;
+}
+
+div.autosuggest ul li.as_highlight a:hover{
+	background-color: #1B5CCD;
+}
+
+div.autosuggest ul li a span{
+	display: block;
+	padding: 3px 6px;
+	font-weight: bold;
+	font-size: 9px;
+}
+
+div.autosuggest ul li a span small{
+	font-weight: normal;
+	color: #999;
+}
+
+div.autosuggest ul li.as_highlight a span small{
+	color: #ccc;
+}
+
+div.autosuggest ul li.as_highlight a{
+	color: #fff;
+	background-color: #1B5CCD;
+	background-image: url(http://libwebdes.lbv.org.br/img/auto_sugestao/hl_corner_br.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+div.autosuggest ul li.as_highlight a span{
+	background-image: url(http://libwebdes.lbv.org.br/img/auto_sugestao/hl_corner_bl.gif);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}
+
+div.autosuggest ul li a .tl,
+div.autosuggest ul li a .tr{
+	background-image: transparent;
+	background-repeat: no-repeat;
+	width: 6px;
+	height: 6px;
+	position: absolute;
+	top: 0;
+	padding: 0;
+	margin: 0;
+}
+
+div.autosuggest ul li a .tr{
+	right: 0;
+}
+
+div.autosuggest ul li.as_highlight a .tl{
+	left: 0;
+	background-image: url(http://libwebdes.lbv.org.br/img/auto_sugestao/hl_corner_tl.gif);
+	background-position: bottom left;
+}
+
+div.autosuggest ul li.as_highlight a .tr{
+	right: 0;
+	background-image: url(http://libwebdes.lbv.org.br/img/auto_sugestao/hl_corner_tr.gif);
+	background-position: bottom right;
+}
+
+div.autosuggest ul li.as_warning{
+	font-weight: bold;
+	text-align: center;
+}
+
+div.autosuggest ul em{
+	font-style: normal;
+	color: #6EADE7;
+}

@@ -1,0 +1,33 @@
+<!-- TO DO: Debugar - está imprimindo quatro registros na tabela, sendo que só há dois e quatro parcelas -->
+
+<% @dividas.each do |divida| %>
+	<tr>
+		<td class="campo" style="text-align: left;"><%= divida.descricao %></td>
+		<%
+		12.times do |mes| 
+#			raise divida.Parcelas.size.inspect
+			parcela = divida.Parcelas.detect{|teste| teste.data_vencimento.month == (mes + 1)} rescue nil %>
+			<td>
+			<%=
+				if parcela
+					if parcela.pago
+						if modo_tela == 'EDT'
+							"<input id='ckb_divida_#{divida.id}' class='checkbox' type='checkbox' checked='' name='ckb_parcela[#{mes-1}]'/>"
+						else
+							"<div class='pago'/>"
+						end
+					else
+						if modo_tela == 'EDT'
+							"<input id='ckb_divida_#{divida.id}' class='checkbox' type='checkbox' name='ckb_parcela[#{mes-1}]'/>"
+						else
+							"<div class='devedor'/>"
+						end
+					end
+				else
+					"-" 
+				end
+			%>
+			</td>	
+		<%end%>
+	</tr>
+<%end%>

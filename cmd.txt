@@ -1,0 +1,29 @@
+=========MIGRATE=====
+
+*CRIANDO
+ruby script/generate migration Nome_migration
+
+
+*Executando pra cima:
+rake db:migrate:up VERSION=20090219151435
+
+*voltando
+rake db:rollback
+
+*Executando todas os migration
+db:reset
+
+===========================
+
+=========SCAFFOLD==========
+*gerando CRUD - Scaffold
+ruby script/generate scaffold Cliente empresa:string nome:string email:string tpo_email:string preco:decimal parcelas:integer dta_vencimento:date
+
+ruby script/generate scaffold Divida descricao:string tpo_notificacao:string preco:decimal parcelas:integer
+
+
+
+===========================
+
+
+	

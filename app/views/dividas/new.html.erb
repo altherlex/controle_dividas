@@ -1,0 +1,51 @@
+<% @sem_menu = true %>
+<div class="topo"><p class="titulo">Criar parcela</p></div>
+
+<% form_for(@divida) do |f| %>
+<ul class="menu2">
+
+</ul>
+  <%= f.error_messages %>
+  
+<div class="corpo">
+<table>
+  <tbody>
+  
+    <tr>
+      <%#= f.label :descricao %><br />
+      <td><label class="campo">Descricao</label><br /></td>
+      <td><%= f.text_field :descricao, {:id=>'descricao', :style=>"width: 100%", :maxlength => 80}%></td>
+    </tr>
+    
+    <tr>
+      <td><label class="campo">N&ordm; parcelas</label><br /></td>
+      <td><%= f.text_field :nmr_parcelas, {:id=>'nmr_parcelas', :class => "txtCampoMinimo", :maxlength => 3} %></td>
+      
+      <td><label class="campo">Valor parcela (R$)</label><br /></td>
+      <td><%= text_field (:Parcelas, :preco, {:class => "txtCampoMedio" })%></td>
+    </tr>
+    
+    <tr>
+      <td><label class="campo">In&iacute;cio das parcelas</label><br /></td>
+      <td>
+        <%#= select_day (Time.now.day, :id => 'teste') %>
+        <%= date_select(:Data_venc, :dta_vencimento, {:order => [:day, :month, :year], :use_month_names => %w(Janeiro Fevereiro Mar&ccedil;o Abril Maio Junho Julho Agosto Setembro Outubro Novembro Dezembro), :start_year => Time.now.year}) %>
+      </td>
+      
+    </tr>
+    
+    <tr>
+      <td><label class="campo">Juros</label><br /></td>
+      <td><%= text_field :Parcelas, :juros, {:class => "txtExtraCampoMinimo", :maxlength => 2 }%>%</td>
+    
+      <td><label class="campo">Multa (R$)</label><br /></td>
+      <td><%= text_field :Parcelas, :multa, {:class => "txtCampoMinimo" } %></td>
+    </tr>
+    
+  </tbody>
+</table>
+<%#= f.submit "Salvar", :id => "btnSalvar" %>
+<input type="button" name="aBtnPesquisar" id="btnSalvar" value="Salvar" class="botao"/>
+<% end %>
+<%#= link_to 'Back', dividas_path %>
+</div>

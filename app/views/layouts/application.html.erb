@@ -1,0 +1,32 @@
+<% ActionView::Helpers::AssetTagHelper.register_javascript_expansion :specific => ["jquery-1.3.2", "jquery-latest", "jquery.tablesorter"] %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Clientes: <%= controller.action_name %></title>
+
+    <%= stylesheet_link_tag 'glb' %>
+<!-- 
+    <script type="text/javascript" src="http://tablesorter.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="http://tablesorter.com/jquery.tablesorter.js"></script>
+-->
+    <%= javascript_include_tag  %w(prototype.js ajax.js html.js ) %> <!-- :specific, :defaults -->
+    <%= "<script type='text/javascript' src='/javascripts/telas/#{controller.controller_name}/#{controller.action_name}.js' ></script>"   if File.exist?( File.expand_path( "public/javascripts/telas/#{controller.controller_name}/#{controller.action_name}.js" ) ) %>
+</head>
+<body>
+<% if usuario_logado? && controller_name.to_s != "dividas"%>
+<div class="menu_principal">
+	<ul>
+		<li class="item_1"><%= link_to "inicio", :controller => :clientes %></li>
+		<li class="item_2"><%= link_to "configuracao", :controller => :configuracao %></li>
+		<li class="item_3"><%= link_to "sair", :controller => :admin, :action => :logout %></li>
+	</ul>
+</div>
+<%end%>
+
+<%= yield  %>
+
+</body>
+</html>

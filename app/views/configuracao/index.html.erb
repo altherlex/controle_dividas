@@ -1,0 +1,14 @@
+<div class="topo">
+<p class="icone"><%= image_tag('config32.png') %></p>
+<p class="titulo">Fun&ccedil;&otilde;es de configura&ccedil;&atilde;o</p>
+</div>
+
+<div class="corpo">
+
+<div class="corpo">
+	<ul class="configuracao">
+    	<li><%= link_to "#{image_tag ('config_email32.png')} E-mail", :action => 'email' %></li>
+		<li><%= link_to "#{image_tag ('usuarios24.png')} Usu&aacute;rios", :controller => 'usuarios' %></li>
+		<li><%= link_to "#{image_tag ('template_email.png')} Templates", :action => 'template' %></li>
+	</ul>
+</div>

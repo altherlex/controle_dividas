@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  descricao: MyString
+  tpo_notificacao: MyString
+  preco: 9.99
+  parcelas: 1
+
+two:
+  descricao: MyString
+  tpo_notificacao: MyString
+  preco: 9.99
+  parcelas: 1
